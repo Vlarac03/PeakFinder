@@ -4,7 +4,7 @@
 
 Un identificador de cumbres para la muñeca: apuntas hacia una montaña y el reloj te dice qué cima es, a partir de la posición (GPS) y la brújula. Pensado para funcionar **offline**, sin móvil ni cobertura.
 
-> **Estado: en diseño.** Todavía no hay código en el reloj. Ver la [hoja de ruta](#hoja-de-ruta).
+> **Estado: prototipo de prueba de sensores (v0.1.0).** Muestra GPS, brújula y barómetro; todavía no identifica cimas. Ver [`docs/prova-sensors.md`](docs/prova-sensors.md) (en catalán) y la [hoja de ruta](#hoja-de-ruta).
 
 ## Idea
 

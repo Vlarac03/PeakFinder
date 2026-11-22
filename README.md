@@ -4,7 +4,7 @@
 
 A peak identifier for your wrist: point at a mountain and the watch tells you which summit it is, using GPS position and the compass. Designed to work **offline**, with no phone and no signal.
 
-> **Status: design phase.** There is no watch code yet. See the [roadmap](#roadmap).
+> **Status: sensor test prototype (v0.1.0).** Shows GPS, compass and barometer; it does not identify peaks yet. See [`docs/prova-sensors.md`](docs/prova-sensors.md) (Catalan) and the [roadmap](#roadmap).
 
 ## Idea
 

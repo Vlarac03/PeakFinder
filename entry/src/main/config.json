@@ -1,0 +1,68 @@
+{
+  "app": {
+    "bundleName": "com.vlarac.peakfinder",
+    "vendor": "Vlarac",
+    "version": {
+      "code": 1,
+      "name": "0.1.0"
+    }
+  },
+  "deviceConfig": {
+    "default": {
+      "keepAlive": true
+    }
+  },
+  "module": {
+    "deviceType": [
+      "liteWearable",
+      "wearable"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry"
+    },
+    "abilities": [
+      {
+        "name": ".MainAbility",
+        "srcLanguage": "js",
+        "srcPath": "MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:MainAbility_desc",
+        "label": "$string:MainAbility_label",
+        "type": "page",
+        "visible": true
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": ".MainAbility",
+        "window": {
+          "designWidth": 454,
+          "autoDesignWidth": false
+        }
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.LOCATION",
+        "reason": "Necessari per llegir la posicio GPS",
+        "usedScene": {
+          "ability": [".MainAbility"],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.KEEP_BACKGROUND_RUNNING",
+        "reason": "Necessari per mantenir la pantalla encesa durant la prova",
+        "usedScene": {
+          "ability": [".MainAbility"],
+          "when": "always"
+        }
+      }
+    ]
+  }
+}

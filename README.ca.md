@@ -4,7 +4,7 @@
 
 Un identificador de cims per al canell: apuntes cap a una muntanya i el rellotge et diu quin cim és, a partir de la posició (GPS) i la brúixola. Pensat per funcionar **offline**, sense mòbil ni cobertura.
 
-> **Estat: en disseny.** Encara no hi ha codi al rellotge. Veure el [full de ruta](#full-de-ruta).
+> **Estat: prototip de prova de sensors (v0.1.0).** Mostra GPS, brúixola i baròmetre; encara no identifica cims. Veure [`docs/prova-sensors.md`](docs/prova-sensors.md) i el [full de ruta](#full-de-ruta).
 
 ## Idea
 

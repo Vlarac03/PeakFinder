@@ -1,0 +1,15 @@
+<div class="container">
+    <text class="title">PEAKFINDER · PROVA</text>
+
+    <text class="heading">{{headingText}}</text>
+    <text class="card">{{cardinal}}</text>
+    <text class="status {{compassOk ? 'ok' : 'err'}}">Brúixola: {{compassStatus}}</text>
+
+    <text class="line">{{latText}}</text>
+    <text class="line">{{lonText}}</text>
+    <text class="line">{{altText}}</text>
+    <text class="status {{gpsOk ? 'ok' : 'err'}}">GPS: {{gpsStatus}}</text>
+
+    <text class="line">{{baroText}}</text>
+    <text class="status {{baroOk ? 'ok' : 'err'}}">Baròmetre: {{baroStatus}}</text>
+</div>

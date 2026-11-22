@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "Peak identifier prototype: reads GPS, compass and barometer."
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "Peak identifier prototype: reads GPS, compass and barometer."
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "Peakfinder"
+    }
+  ]
+}

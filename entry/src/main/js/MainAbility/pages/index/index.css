@@ -1,0 +1,15 @@
+.container {
+  flex-direction: column;
+  width: 466px;
+  height: 466px;
+  background-color: black;
+  align-items: center;
+  padding-top: 36px;
+}
+.title { font-size: 20px; color: #888888; margin-bottom: 4px; }
+.heading { font-size: 64px; color: #ffffff; }
+.card { font-size: 30px; color: #ffee00; margin-bottom: 2px; }
+.line { font-size: 26px; color: #ffffff; }
+.status { font-size: 18px; margin-bottom: 8px; }
+.ok { color: #44ff44; }
+.err { color: #ff6666; }
