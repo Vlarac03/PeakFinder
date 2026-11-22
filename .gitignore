@@ -1,0 +1,29 @@
+# Signing material (never commit)
+*.p12
+*.p7b
+*.cer
+*.csr
+*.pem
+*.key
+signing/
+*.udid
+
+# DevEco Studio / HarmonyOS build output
+.hvigor/
+.idea/
+node_modules/
+build/
+oh_modules/
+*.hap
+local.properties
+
+# Data generation
+data/raw/
+data/.cache/
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
