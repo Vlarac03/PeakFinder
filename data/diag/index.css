@@ -1,0 +1,10 @@
+.root { width: 466px; height: 466px; background-color: black; }
+.col { flex-direction: column; width: 466px; height: 466px; align-items: center; padding-top: 34px; background-color: black; }
+.ttl { font-size: 22px; color: #888888; margin-bottom: 6px; }
+.res { font-size: 20px; color: #ffee00; width: 380px; height: 52px; text-align: center; margin-bottom: 6px; }
+.blist { width: 466px; height: 300px; }
+.bi { width: 466px; height: 60px; }
+.btn { width: 320px; height: 52px; background-color: #222222; border-radius: 16px; justify-content: center; align-items: center; margin-left: 73px; }
+.bt { font-size: 24px; color: #ffffff; }
+.li { font-size: 24px; color: #ffffff; margin-bottom: 2px; }
+.cwrap { background-color: #000000; }

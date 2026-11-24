@@ -1,0 +1,46 @@
+<div class="root">
+
+  <!-- Menu de proves -->
+  <div if="{{view === 'menu'}}" class="col">
+    <text class="ttl">DIAGNÒSTIC</text>
+    <text class="res">{{res}}</text>
+    <list class="blist">
+      <list-item class="bi"><div class="btn" onclick="t1"><text class="bt">1 Brúixola</text></div></list-item>
+      <list-item class="bi"><div class="btn" onclick="t2"><text class="bt">2 GPS</text></div></list-item>
+      <list-item class="bi"><div class="btn" onclick="t3"><text class="bt">3 Càlcul de cims</text></div></list-item>
+      <list-item class="bi"><div class="btn" onclick="t4"><text class="bt">4 Desar / llegir</text></div></list-item>
+      <list-item class="bi"><div class="btn" onclick="t5"><text class="bt">5 Llista de text</text></div></list-item>
+      <list-item class="bi"><div class="btn" onclick="c1"><text class="bt">6 Canvas 466x100</text></div></list-item>
+      <list-item class="bi"><div class="btn" onclick="c2"><text class="bt">7 Canvas 466x160</text></div></list-item>
+      <list-item class="bi"><div class="btn" onclick="c3"><text class="bt">8 Canvas 466x240</text></div></list-item>
+      <list-item class="bi"><div class="btn" onclick="c4"><text class="bt">9 Canvas 700x280</text></div></list-item>
+      <list-item class="bi"><div class="btn" onclick="t10"><text class="bt">10 Estrès: 30 dibuixos</text></div></list-item>
+      <list-item class="bi"><div class="btn" onclick="t11"><text class="bt">11 Moure canvas x30</text></div></list-item>
+    </list>
+  </div>
+
+  <!-- Llista de text -->
+  <div if="{{view === 'list'}}" class="col" onclick="back">
+    <text class="ttl">LLISTA (toca per tornar)</text>
+    <text class="li">{{n0}}</text>
+    <text class="li">{{n1}}</text>
+    <text class="li">{{n2}}</text>
+    <text class="li">{{n3}}</text>
+    <text class="li">{{n4}}</text>
+    <text class="li">{{n5}}</text>
+    <text class="li">{{n6}}</text>
+    <text class="li">{{n7}}</text>
+    <text class="li">{{n8}}</text>
+    <text class="li">{{n9}}</text>
+  </div>
+
+  <!-- Canvas de prova -->
+  <div if="{{view === 'canvas'}}" class="col" onclick="back">
+    <text class="res">{{res}}</text>
+    <div class="cwrap" style="margin-left: {{cx}}px; width: {{cw}}px; height: {{ch}}px;">
+      <canvas ref="c" style="width: {{cw}}px; height: {{ch}}px; background-color: #000000;"></canvas>
+    </div>
+    <text class="ttl">toca per tornar</text>
+  </div>
+
+</div>

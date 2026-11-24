@@ -1,15 +1,32 @@
-.container {
-  flex-direction: column;
-  width: 466px;
-  height: 466px;
-  background-color: black;
-  align-items: center;
-  padding-top: 36px;
-}
-.title { font-size: 20px; color: #888888; margin-bottom: 4px; }
-.heading { font-size: 64px; color: #ffffff; }
-.card { font-size: 30px; color: #ffee00; margin-bottom: 2px; }
-.line { font-size: 26px; color: #ffffff; }
-.status { font-size: 18px; margin-bottom: 8px; }
-.ok { color: #44ff44; }
-.err { color: #ff6666; }
+/* Cap color de fons ni de text aqui: tots venen de dades (tema) lligades a l'HML. L'unica excepcio es .err (un vermell que es veu en els dos fons). */
+.root { width: 466px; height: 466px; }
+.col { flex-direction: column; width: 466px; height: 466px; align-items: center; }
+
+/* Seccio: punt de brujola, capcalera, canvas i ajuda */
+.mrow { width: 466px; height: 112px; }
+.mk { width: 22px; height: 22px; border-radius: 11px; }
+.hrow { width: 466px; height: 52px; flex-direction: row; justify-content: space-around; align-items: center; }
+.hl { width: 120px; font-size: 24px; text-align: center; }
+.hc { width: 160px; font-size: 40px; text-align: center; }
+.hr { width: 120px; font-size: 24px; text-align: center; }
+.relief { width: 466px; height: 170px; }
+.hint { font-size: 16px; width: 400px; text-align: center; margin-top: 10px; }
+
+/* Avis "cap cim" */
+.ntitle { font-size: 26px; margin-top: 66px; margin-bottom: 6px; }
+.nsub { font-size: 20px; margin-bottom: 14px; }
+.nrow { font-size: 24px; margin-bottom: 4px; }
+
+/* Espera */
+.title { font-size: 34px; margin-top: 96px; margin-bottom: 24px; }
+.status { font-size: 24px; margin-bottom: 8px; }
+.hint2 { font-size: 18px; margin-top: 18px; width: 380px; text-align: center; }
+.err { font-size: 18px; color: #e53935; margin-top: 10px; width: 380px; text-align: center; }
+
+/* Menu: mateix estil que els ajustos de PadelCounter, compactat per a la pantalla rodona */
+.menu-page { padding-top: 40px; }
+.menu-title { font-size: 26px; margin-bottom: 8px; }
+.menu-item { width: 300px; height: 52px; border-radius: 18px; justify-content: center; align-items: center; margin-bottom: 8px; }
+.menu-text { font-size: 24px; }
+.menu-msg { font-size: 20px; margin-top: 2px; }
+.footer-text { margin-top: 6px; width: 466px; text-align: center; font-size: 18px; }

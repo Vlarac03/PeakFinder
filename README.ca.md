@@ -4,16 +4,15 @@
 
 Un identificador de cims per al canell: apuntes cap a una muntanya i el rellotge et diu quin cim és, a partir de la posició (GPS) i la brúixola. Pensat per funcionar **offline**, sense mòbil ni cobertura.
 
-> **Estat: prototip de prova de sensors (v0.1.0).** Mostra GPS, brúixola i baròmetre; encara no identifica cims. Veure [`docs/prova-sensors.md`](docs/prova-sensors.md) i el [full de ruta](#full-de-ruta).
+> **Estat: v0.1.44, funciona al GT 6.** Mostra els cims més alts que tens al voltant, per seccions. Proves i notes de disseny a [`data/README.md`](data/README.md).
 
 ## Idea
 
-1. Llegir la posició (latitud, longitud, altitud) i el rumb de la brúixola.
-2. Carregar els cims propers d'una base de dades compacta empaquetada a l'app.
-3. Per a cada cim, calcular distància, azimut i angle d'elevació.
-4. Mostrar el cim que queda més a prop del rumb apuntat, amb nom, alçada i distància.
-
-Detalls a [`docs/arquitectura.md`](docs/arquitectura.md).
+1. Llegeix la posició (latitud, longitud, altitud) i el rumb de la brúixola **una sola vegada** i les apaga (la brúixola continua, com a molt un cop per segon, només per al punt de la vora).
+2. Carrega els cims propers d'una base de dades compacta inclosa a l'app (una sola cadena de línies `lat,lon,altura,nom`).
+3. Parteix el cercle en seccions centrades en els punts cardinals: 4 de 90°, 8 de 45° (NE, SE…) o 16 de 22,5° (NNE, ENE…), segons el zoom.
+4. Cada secció és un canvas petit amb els **3 cims més alts** de la secció (nom, altura, distància) i una silueta senzilla. Lliscar canvia de secció.
+5. Un punt a la vora de dalt de la pantalla fa de brúixola: verd si mires cap al centre de la secció, vermell a l'esquerra o a la dreta si t'has de girar.
 
 ## Maquinari objectiu
 
@@ -25,12 +24,12 @@ Pirineus i Catalunya. La base de dades es genera amb l'script de [`data/`](data/
 
 ## Full de ruta
 
-- [ ] Provar que `@system.geolocation` i `@system.sensor` (brúixola) funcionen al GT 6 com a app de tercers.
-- [ ] Mesurar el límit de mida de l'app i de memòria al rellotge.
-- [ ] Script que genera el JSON de cims (format compacte).
-- [ ] Càlcul d'azimut i elevació, i selecció del cim apuntat.
-- [ ] Interfície: brúixola, nom del cim, alçada i distància.
-- [ ] Gestió del temps d'ús del GPS i de la bateria.
+- [x] GPS i brúixola al GT 6 com a app de tercers.
+- [x] Base de dades de cims d'OpenStreetMap (`data/build_peaks.py`).
+- [x] Seccions amb els 3 cims més alts, swipe, zoom 1x/2x/4x, punt de brúixola a la vora, fons negre/blanc.
+- [ ] Noms girats al llarg dels cims (com les apps amb foto).
+- [ ] Límit de distància opcional, i ordenar per prominència en lloc d'altura.
+- [ ] Seccions que segueixin el rumb del canell automàticament.
 
 ## Instal·lació
 

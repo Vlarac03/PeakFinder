@@ -1,15 +1,57 @@
-<div class="container">
-    <text class="title">PEAKFINDER · PROVA</text>
+<div class="root" style="background-color: {{bg}};">
 
-    <text class="heading">{{headingText}}</text>
-    <text class="card">{{cardinal}}</text>
-    <text class="status {{compassOk ? 'ok' : 'err'}}">Brúixola: {{compassStatus}}</text>
+  <!-- Una seccio: punt de brujola a la vora, capcalera i canvas amb els 3 cims mes alts (swipe: canvia de seccio) -->
+  <div if="{{showPage && !showMenu}}" class="col" style="background-color: {{bg}};" onswipe="tSwipe" onclick="openMenu">
+    <div class="mrow">
+      <div class="mk" style="margin-left: {{mx}}px; margin-top: {{my}}px; background-color: {{mc}};"></div>
+    </div>
+    <div class="hrow">
+      <text class="hl" style="color: {{sub}};">{{pl}}</text>
+      <text class="hc" style="color: {{fg}};">{{pc}}</text>
+      <text class="hr" style="color: {{sub}};">{{pr}}</text>
+    </div>
+    <canvas ref="c" class="relief" style="background-color: {{bg}};" onswipe="tSwipe" onclick="openMenu"></canvas>
+    <text class="hint" style="color: {{sub}};">llisca per canviar de zona · toca per al menú</text>
+  </div>
 
-    <text class="line">{{latText}}</text>
-    <text class="line">{{lonText}}</text>
-    <text class="line">{{altText}}</text>
-    <text class="status {{gpsOk ? 'ok' : 'err'}}">GPS: {{gpsStatus}}</text>
+  <!-- Avis: cap cim dins del radi -->
+  <div if="{{showNear && !showMenu}}" class="col" style="background-color: {{bg}};" onclick="openMenu">
+    <text class="ntitle" style="color: {{fg}};">Cap cim a menys de 150 km</text>
+    <text class="nsub" style="color: {{fg}};">Els 3 més propers:</text>
+    <text class="nrow" style="color: {{fg}};">{{r0}}</text>
+    <text class="nrow" style="color: {{fg}};">{{r1}}</text>
+    <text class="nrow" style="color: {{fg}};">{{r2}}</text>
+    <text class="nrow" style="color: {{fg}};">{{r3}}</text>
+    <text class="nrow" style="color: {{fg}};">{{r4}}</text>
+    <text class="nrow" style="color: {{fg}};">{{r5}}</text>
+  </div>
 
-    <text class="line">{{baroText}}</text>
-    <text class="status {{baroOk ? 'ok' : 'err'}}">Baròmetre: {{baroStatus}}</text>
+  <!-- Menu (mateix estil que els ajustos de PadelCounter) -->
+  <div if="{{showMenu}}" class="col menu-page" style="background-color: {{bg}};">
+    <text class="menu-title" style="color: {{fg}};">MENU</text>
+    <div class="menu-item" style="background-color: {{itemBg}};" onclick="toggleTheme">
+      <text class="menu-text" style="color: {{fg}};">Fons: {{dark ? 'NEGRE' : 'BLANC'}}</text>
+    </div>
+    <div class="menu-item" style="background-color: {{itemBg}};" onclick="nextZoom">
+      <text class="menu-text" style="color: {{fg}};">{{zoomText}}</text>
+    </div>
+    <div class="menu-item" style="background-color: {{itemBg}};" onclick="refreshPosition">
+      <text class="menu-text" style="color: {{fg}};">Actualitzar posició</text>
+    </div>
+    <div class="menu-item" style="background-color: {{itemBg}};" onclick="closeMenu">
+      <text class="menu-text" style="color: {{fg}};">Tornar</text>
+    </div>
+    <text class="menu-msg" style="color: {{sub}};">{{menuMsg}}</text>
+    <text class="footer-text" style="color: {{fg}};">Developed by Vlarac</text>
+  </div>
+
+  <!-- Espera: busca brujola i GPS -->
+  <div if="{{!showPage && !showNear && !showMenu}}" class="col" style="background-color: {{bg}};" onclick="retry">
+    <text class="title" style="color: {{fg}};">PEAKFINDER</text>
+    <text class="status" style="color: {{fg}};">Brúixola: {{compassStatus}}</text>
+    <text class="status" style="color: {{fg}};">GPS: {{gpsStatus}}</text>
+    <text class="hint2" style="color: {{sub}};">Surt a l'aire lliure i espera uns segons</text>
+    <text class="err">{{errText}}</text>
+  </div>
+
 </div>

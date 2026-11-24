@@ -3,8 +3,8 @@
     "bundleName": "com.vlarac.peakfinder",
     "vendor": "Vlarac",
     "version": {
-      "code": 1,
-      "name": "0.1.0"
+      "code": 45,
+      "name": "0.1.44"
     }
   },
   "deviceConfig": {

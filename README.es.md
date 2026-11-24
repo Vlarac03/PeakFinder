@@ -4,16 +4,15 @@
 
 Un identificador de cumbres para la muñeca: apuntas hacia una montaña y el reloj te dice qué cima es, a partir de la posición (GPS) y la brújula. Pensado para funcionar **offline**, sin móvil ni cobertura.
 
-> **Estado: prototipo de prueba de sensores (v0.1.0).** Muestra GPS, brújula y barómetro; todavía no identifica cimas. Ver [`docs/prova-sensors.md`](docs/prova-sensors.md) (en catalán) y la [hoja de ruta](#hoja-de-ruta).
+> **Estado: v0.1.44, funciona en el GT 6.** Muestra las cimas más altas que tienes alrededor, por secciones. Pruebas y notas de diseño en [`data/README.md`](data/README.md) (en catalán).
 
 ## Idea
 
-1. Leer la posición (latitud, longitud, altitud) y el rumbo de la brújula.
-2. Cargar las cimas cercanas de una base de datos compacta empaquetada en la app.
-3. Para cada cima, calcular distancia, acimut y ángulo de elevación.
-4. Mostrar la cima más cercana al rumbo apuntado, con nombre, altura y distancia.
-
-Detalles en [`docs/arquitectura.md`](docs/arquitectura.md) (en catalán).
+1. Lee la posición (latitud, longitud, altitud) y el rumbo de la brújula **una sola vez** y las apaga (la brújula sigue, como mucho una vez por segundo, solo para el punto del borde).
+2. Carga las cimas cercanas de una base de datos compacta incluida en la app (una sola cadena de líneas `lat,lon,altura,nombre`).
+3. Parte el círculo en secciones centradas en los puntos cardinales: 4 de 90°, 8 de 45° (NE, SE…) o 16 de 22,5° (NNE, ENE…), según el zoom.
+4. Cada sección es un canvas pequeño con las **3 cimas más altas** de la sección (nombre, altura, distancia) y una silueta sencilla. Deslizar cambia de sección.
+5. Un punto en el borde superior de la pantalla hace de brújula: verde si miras al centro de la sección, rojo a izquierda o derecha si debes girar.
 
 ## Hardware objetivo
 
@@ -25,12 +24,12 @@ Pirineos y Cataluña. La base de datos se genera con el script de [`data/`](data
 
 ## Hoja de ruta
 
-- [ ] Probar que `@system.geolocation` y `@system.sensor` (brújula) funcionan en el GT 6 como app de terceros.
-- [ ] Medir el límite de tamaño de la app y de memoria en el reloj.
-- [ ] Script que genera el JSON de cimas (formato compacto).
-- [ ] Cálculo de acimut y elevación, y selección de la cima apuntada.
-- [ ] Interfaz: brújula, nombre de la cima, altura y distancia.
-- [ ] Gestión del uso del GPS y de la batería.
+- [x] GPS y brújula en el GT 6 como app de terceros.
+- [x] Base de datos de cimas de OpenStreetMap (`data/build_peaks.py`).
+- [x] Secciones con las 3 cimas más altas, deslizar, zoom 1x/2x/4x, punto de brújula en el borde, fondo negro/blanco.
+- [ ] Nombres girados a lo largo de las cimas (como las apps con foto).
+- [ ] Límite de distancia opcional, y ordenar por prominencia en vez de altura.
+- [ ] Secciones que sigan el rumbo de la muñeca automáticamente.
 
 ## Instalación
 
