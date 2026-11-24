@@ -1,5 +1,5 @@
 // Prova de la pagina (index.js) amb node, sense rellotge: sensors, emmagatzematge, temps i canvas falsos.
-// Us: node data/test_page.js
+// Us: node tests/test_page.js
 // El canvas fals imita el del rellotge lleuger: no te clearRect i el text nomes "es veu" amb la lletra HarmonyOS Sans.
 var fs = require('fs'), assert = require('assert'), path = require('path');
 var base = path.join(__dirname, '../entry/src/main/js/MainAbility/');

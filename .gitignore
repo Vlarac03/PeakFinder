@@ -27,3 +27,7 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# Notes locals (no es pugen)
+TODO.md
+file_system/

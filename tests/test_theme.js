@@ -1,5 +1,5 @@
 // Vigila el canvi de fons negre/blanc i les dades lligades a l'HML sense haver de provar-ho al rellotge.
-// Us: node data/test_theme.js
+// Us: node tests/test_theme.js
 //  - cap color de fons ni de text a l'CSS (tot ve de dades del tema), amb l'excepcio de .err;
 //  - cada <text> te el seu color lligat a dades i cada contenidor el seu fons;
 //  - tot el que l'HML llegeix ({{...}}) i tots els controladors (onclick, onswipe...) existeixen a la pagina;

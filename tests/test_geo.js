@@ -1,4 +1,4 @@
-// Prova de geo.js amb node: node data/test_geo.js
+// Prova de geo.js amb node: node tests/test_geo.js
 var fs = require('fs'), assert = require('assert'), path = require('path');
 var load = function (f) {
     var src = fs.readFileSync(path.join(__dirname, '../entry/src/main/js/MainAbility/common/' + f), 'utf8');

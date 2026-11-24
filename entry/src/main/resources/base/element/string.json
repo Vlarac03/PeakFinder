@@ -2,15 +2,15 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "Peak identifier prototype: reads GPS, compass and barometer."
+      "value": "Shows the highest peaks around you, section by section, with name, height and distance. Works offline from your wrist."
     },
     {
       "name": "MainAbility_desc",
-      "value": "Peak identifier prototype: reads GPS, compass and barometer."
+      "value": "Shows the highest peaks around you, section by section, with name, height and distance. Works offline from your wrist."
     },
     {
       "name": "MainAbility_label",
-      "value": "Peakfinder"
+      "value": "Peak Finder"
     }
   ]
 }
