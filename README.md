@@ -46,6 +46,9 @@ The signing files (`.p12`, `.p7b`, `.cer`) are not part of this repository.
 
 ## Project structure
 
+<details>
+<summary>Files</summary>
+
 | File | What it does |
 | --- | --- |
 | `entry/src/main/js/MainAbility/pages/index/index.js` | Sections, swipe, compass dot, menu, GPS, saving and loading |
@@ -58,6 +61,8 @@ The signing files (`.p12`, `.p7b`, `.cer`) are not part of this repository.
 | `entry/src/main/config.json` | Bundle name, permissions, version |
 
 `@system.storage` on lite wearables only holds about 128 bytes per value, so the position is saved as a short comma-separated string. The canvas of the lite wearables has no `clearRect` and only draws text with the `HarmonyOS Sans` font; the code and the tests take that into account.
+
+</details>
 
 ## Data and licences
 

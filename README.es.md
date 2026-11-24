@@ -46,6 +46,9 @@ Los archivos de firma (`.p12`, `.p7b`, `.cer`) no forman parte de este repositor
 
 ## Estructura del proyecto
 
+<details>
+<summary>Archivos</summary>
+
 | Archivo | Qué hace |
 | --- | --- |
 | `entry/src/main/js/MainAbility/pages/index/index.js` | Secciones, deslizar, punto de brújula, menú, GPS, guardar y cargar |
@@ -58,6 +61,8 @@ Los archivos de firma (`.p12`, `.p7b`, `.cer`) no forman parte de este repositor
 | `entry/src/main/config.json` | Nombre del paquete, permisos, versión |
 
 `@system.storage` en los relojes ligeros solo guarda unos 128 bytes por valor, así que la posición se guarda como un texto corto separado por comas. El canvas de los relojes ligeros no tiene `clearRect` y solo dibuja texto con la fuente `HarmonyOS Sans`; el código y las pruebas lo tienen en cuenta.
+
+</details>
 
 ## Datos y licencias
 

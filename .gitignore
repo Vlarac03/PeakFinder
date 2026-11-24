@@ -29,5 +29,6 @@ __pycache__/
 Thumbs.db
 
 # Notes locals (no es pugen)
+CLAUDE.md
 TODO.md
 file_system/

@@ -46,6 +46,9 @@ Els fitxers de signatura (`.p12`, `.p7b`, `.cer`) no formen part d'aquest reposi
 
 ## Estructura del projecte
 
+<details>
+<summary>Fitxers</summary>
+
 | Fitxer | Què fa |
 | --- | --- |
 | `entry/src/main/js/MainAbility/pages/index/index.js` | Seccions, lliscar, punt de brúixola, menú, GPS, desar i carregar |
@@ -58,6 +61,8 @@ Els fitxers de signatura (`.p12`, `.p7b`, `.cer`) no formen part d'aquest reposi
 | `entry/src/main/config.json` | Nom del paquet, permisos, versió |
 
 `@system.storage` als rellotges lleugers només guarda uns 128 bytes per valor, així que la posició es desa com un text curt separat per comes. El canvas dels rellotges lleugers no té `clearRect` i només dibuixa text amb la lletra `HarmonyOS Sans`; el codi i les proves ho tenen en compte.
+
+</details>
 
 ## Dades i llicències
 
